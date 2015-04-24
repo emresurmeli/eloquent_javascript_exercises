@@ -1,3 +1,13 @@
+function average(array) {
+  function plus(a, b) { return a + b; }
+  return array.reduce(plus) / array.length;
+}
+
+var byName = {};
+ancestry.forEach(function(person) {
+  byName[person.name] = person;
+});
+
 var motherChildAgeDifference = ancestry.filter(function(person) {
   return byName[person["mother"]] != null;
 }).map(function(person) {
