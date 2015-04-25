@@ -1,11 +1,15 @@
-var every = function (array) {
-  return array ? 1 : 0;
+function every(array, predicate) {
+  for (var i = 0; i < array.length; i++) {
+    if (!predicate(array[i]))
+  	  return false;
+  }
+  return true;
 }
 
-var some = function (array) {
-	if (true in array) {
-		return true; 
-	} else {
-		false;
-	}
+function some(array) {
+  for (var i = 0; i < array.length; i++) {
+    if(predicate(array[i]))
+      return true;
+  }
+  return false;
 }
