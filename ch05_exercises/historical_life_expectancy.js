@@ -1,3 +1,4 @@
+// got most of the answer from eloquentjavascript.com
 var whichCentury = forEach(ancestry, function (person) {
   return Math.ceil(person.died / 100);
 });
